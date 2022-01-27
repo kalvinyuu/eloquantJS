@@ -40,18 +40,20 @@
 ** bean counting
 #+BEGIN_SRC js :results output
   let count = 0
-  let x = "BBooyyys"
+  let bean = "B"
+  let string = "BBooyyys"
 
-      function scanner(x, i, count) {
-	  for(let i = 0; i <= x.length; i++){
-	      return(x[i]);
-	      if(scanner(i) === "B") {
-		  return count ++;
-	      }
+  function countBs(string){
+      for(let i = 0; i < string.length; i++) {
+	  if (string[i] === bean) {
+	      count ++;  
 	  }
-	  return count
-     }
-  console.log(countBs());
+	else count; 
+      }
+      return count;
+  }
+  console.log(countBs(string));
   #+END_SRC   
 
   #+RESULTS:
+  : 2
