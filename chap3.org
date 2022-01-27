@@ -1,0 +1,57 @@
+#+TITLE: CHAPTER 3 exercises
+
+** minimum 
+#+BEGIN_SRC js :results output
+    function min(a, b) {
+	if( a <= b) {
+	    return("a is smaller");
+	}
+	else {
+	    return("b is smaller");
+	}
+    }
+    console.log(min(7, 8));
+  #+END_SRC
+
+  #+RESULTS:
+  : a is smaller
+** recursion
+    #+BEGIN_SRC js :results output
+      function isEven(a){
+	  if (a === 1){
+	      return("a is odd");
+	  }
+	  else if(a === 0){
+	      return("a is even");	      
+	  }
+	  else if (a < 0 ){
+	      return isEven(a = -a);
+	  }
+	  else{
+	      return isEven(a - 2);
+	  }
+      }
+      console.log(isEven(9));
+  #+END_SRC
+
+  #+RESULTS:
+  : a is odd
+
+** bean counting
+#+BEGIN_SRC js :results output
+  let count = 0
+  let x = "BBooyyys"
+
+      function scanner(x, i, count) {
+	  for(let i = 0; i <= x.length; i++){
+	      return(x[i]);
+	      if(scanner(i) === "B") {
+		  return count ++;
+	      }
+	  }
+	  return count
+     }
+  console.log(countBs());
+  #+END_SRC   
+
+  #+RESULTS:
