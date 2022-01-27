@@ -39,11 +39,8 @@
 
 ** bean counting
 #+BEGIN_SRC js :results output
-  let count = 0
-  let bean = "B"
-  let string = "BBooyyys"
-
-  function countBs(string){
+  function countBs(string, bean){
+    let count = 0
       for(let i = 0; i < string.length; i++) {
 	  if (string[i] === bean) {
 	      count ++;  
@@ -52,8 +49,10 @@
       }
       return count;
   }
-  console.log(countBs(string));
+  console.log(countBs("jajajajarule", "j"));
+console.log(countBs("kalvin campbell gha wai yu", "a"))
   #+END_SRC   
 
   #+RESULTS:
-  : 2
+  : 4
+  : 4
