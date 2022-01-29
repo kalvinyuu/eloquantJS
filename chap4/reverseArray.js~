@@ -1,0 +1,8 @@
+function reverseArray(sequence){
+    let reverseSequence = []
+    for(let i = 0; i <= sequence.length; i++){
+	reverseSequence.push(sequence[i]);
+    }
+    return reverseSequence;
+}
+console.log(reverseArray([1, 6, 2, 8, 5, 9, 12, 0]))
