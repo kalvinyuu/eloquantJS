@@ -9,8 +9,7 @@ function range(start, end, operator) {
     else {
 	for(start; start >= end; start += operator) {
 	    sequence.push(start);
-	    
-	}
+	    ;}
     }
     return sequence;
 }
@@ -20,6 +19,5 @@ function sum(sequence) {
     }
     return value;
 }
-
 console.log(range(5, -7, -1));
 console.log(sum(sequence));
