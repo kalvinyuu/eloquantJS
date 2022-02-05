@@ -1,15 +1,28 @@
-/*function deepEqual(a, b) {
-    if(typeof a == b && != null) {
-	(a.keys === b.keys);
-	return true;}
-    
-    else return false;
-    }*/
+function deepEqual(a, b) {
+    if(a === b) return true;
 
-let obj = {value: {is: "an"}, object: 2};
+    if (a == null || typeof a != "object" ||
+	b == null || typeof b != "object") return false;
+
+    let keysA = Object.keys(a), keysB = Object.keys(b);
+
+    if (keysA.length != keysB.length) return false;
+    
+    for (let key of keysA) {
+	if(!keysB.includes(key) || !deepEqual(a[key], b[key]))
+	{return false;}
+    }
+
+    return true;
+}
+
+/*let obj = {value: {is: "an"}, object: 2};
 
 function equal(obj, compare) {
     obj == compare;
 }
 return equal();
-console.log(equal(obj, {value: {is: "an"}, object: 2}))
+console.log(equal(obj, {value: {is: "an"}, object: 2}))*/
+
+let obj = {here: {is: "an"}, object: 2};
+console.log(deepEqual(obj, obj));
